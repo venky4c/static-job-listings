@@ -1,0 +1,67 @@
+html {
+  font: 1.1em/1.4 var(--fontSpartan);
+}
+
+.wrapper {
+  margin: 0;
+  border: 5px solid #56626e;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+@media (min-width: 1440px) {
+  .wrapper {
+    margin: 0 15%;
+  }
+}
+
+.wrapper .header {
+  width: 100%;
+  background-repeat: no-repeat;
+  background: #5ba4a4;
+}
+
+.wrapper .content {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.wrapper .content .jobCards {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1em;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.wrapper .content .jobCards .row1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .content .jobCards .row1 .company {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #5ba4a4;
+}
+
+.wrapper .content .jobCards .row1 .isNew label {
+  color: white;
+  width: 55px;
+  height: 45px;
+  background: #7b8e8e;
+  border-radius: 0.5rem;
+}
+
+.wrapper .content .jobCards .row1 .isFeatured label {
+  color: white;
+  width: 100px;
+  height: 55px;
+  margin: 0 0.5rem;
+  padding-left: 5px;
+  padding-right: 5px;
+  background: #2c3a3a;
+  border-radius: 0.5rem;
+}
+/*# sourceMappingURL=main.css.map */
