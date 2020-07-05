@@ -16,7 +16,7 @@ html {
 }
 
 .wrapper .header {
-  width: 100%;
+  max-width: 100%;
   background-repeat: no-repeat;
   background: #5ba4a4;
 }

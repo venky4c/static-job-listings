@@ -5,7 +5,7 @@ function Header() {
     <div className="header">
       <picture>
         <source
-          media="(min-width: 600px)"
+          media="(min-width: 800px)"
           srcSet={require("../assets/images/bg-header-desktop.svg")}
         />
         <img

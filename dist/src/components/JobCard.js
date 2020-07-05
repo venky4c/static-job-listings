@@ -1,14 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 function JobCard(props) {
-  const { logo, languages } = props;
-  const langIterator = languages.values();
-  function getElements(iterator) {
-    for (let item of iterator) {
-      console.log(item);
-      return item;
-    }
-  }
+  const { logo } = props;
+  const [reqLangs, setReqLangs] = useState([]);
 
   return (
     <div className="jobCards">
