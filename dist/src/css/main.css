@@ -32,7 +32,7 @@ html {
   display: grid;
   grid-gap: 1em;
   -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
 }
 
 .wrapper .content .jobCards .row1 {
@@ -42,7 +42,8 @@ html {
 }
 
 .wrapper .content .jobCards .row1 .company {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: #5ba4a4;
 }
 

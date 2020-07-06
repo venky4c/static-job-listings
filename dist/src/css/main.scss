@@ -72,45 +72,9 @@ html {
     background: color(--desaturatedDarkCyan);
   }
 
-  .content {
-    display: grid;
-    place-content: center;
-
-    .jobCards {
-      display: grid;
-      grid-gap: 1em;
-      grid-template-columns: 1fr;
-
-      .row1 {
-        display: flex;
-
-        .company {
-          font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-            "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-          color: color(--desaturatedDarkCyan);
-        }
-
-        .isNew label {
-          color: white;
-          width: 55px;
-          height: 45px;
-          // margin: 0 0.5rem;
-          // padding: 0 5px;
-          background: color(--darkGrayishCyan);
-          border-radius: 0.5rem;
-        }
-
-        .isFeatured label {
-          color: white;
-          width: 100px;
-          height: 55px;
-          margin: 0 0.5rem;
-          padding-left: 5px;
-          padding-right: 5px;
-          background: color(--veryDarkGrayishCyan);
-          border-radius: 0.5rem;
-        }
-      }
-    }
-  } //end of content
+  .search-bar {
+    display: inline;
+    justify-items: center;
+    background-color: red;
+  }
 } // end of wrapper
