@@ -9,31 +9,39 @@ function FilterJobListings(props) {
 
   return (
     <div className="column">
-      <p>
-        <span className="tag is-primary is-small">
-          {role}
-          <button className="delete" value={role} />
-        </span>
-        <span className="tag is-primary is-small mx-1">
-          {level}
-          <button className="delete"></button>
-        </span>
-        <span className="languages">
-          {languages.map((value, index) => (
-            <span className="tag is-primary is-small">
-              {value}
-              <button className="delete mx-1" key={index}></button>
-            </span>
-          ))}
+      <div className="card">
+        <div className="card-content">
+          <button
+            className="button is-primary is-outlined is-small mx-1 my-1"
+            value={role}
+            onClick={(e) => props.onFilterRoleClicked(e.target.value)}
+          >
+            {role}
+          </button>
+          <button className="button is-primary is-outlined is-small mx-1 my-1">
+            {level}
+          </button>
+          <span className="languages">
+            {languages.map((value, index) => (
+              <button
+                className="button is-primary is-outlined is-small mx-1 my-1"
+                key={index}
+              >
+                {value}
+              </button>
+            ))}
 
-          {tools.map((value, index) => (
-            <span className="tag is-primary is-small mx-1">
-              {value}
-              <button className="delete" key={index}></button>
-            </span>
-          ))}
-        </span>
-      </p>
+            {tools.map((value, index) => (
+              <button
+                className="button is-primary is-outlined is-small mx-1 my-1"
+                key={index}
+              >
+                {value}
+              </button>
+            ))}
+          </span>
+        </div>
+      </div>
     </div>
   );
 }

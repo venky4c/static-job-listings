@@ -5,7 +5,7 @@ import FilterJobListings from "./FilterJobListings";
 function JobSkillsTable(props) {
   const rows = [];
   const filterRole = props.filterRole;
-  let lastCategory = null;
+  const onFilterRoleClicked = props.onFilterRoleClicked;
 
   props.jobs.forEach((job) => {
     if (job.role.indexOf(filterRole) === -1) {
@@ -14,7 +14,10 @@ function JobSkillsTable(props) {
     rows.push(
       <div className="columns">
         <ShowJobListings job={job} />
-        <FilterJobListings job={job} />
+        <FilterJobListings
+          job={job}
+          onFilterRoleClicked={onFilterRoleClicked}
+        />
       </div>
     );
   });

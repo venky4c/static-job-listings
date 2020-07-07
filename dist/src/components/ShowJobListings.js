@@ -2,21 +2,25 @@ import React from "react";
 
 function ShowJobListings(props) {
   const job = props.job;
-  const logo = job.logo;
-  const company = job.company;
-  const isNew = job.isNew;
-  const featured = job.featured;
-  const position = job.position;
-  const postedAt = job.postedAt;
-  const contract = job.contract;
-  const location = job.location;
+  const {
+    logo,
+    company,
+    featured,
+    position,
+    postedAt,
+    contract,
+    location,
+  } = job;
+  const isNew = job.new;
 
   return (
     <div className="column">
       <img src={require(`../assets/images/${logo}`)} alt="" />
       <div className="card">
         <div className="card-content">
-          <span className="tag is-white is-medium">{company}</span>
+          <span className="tag has-text-primary-dark has-text-weight-semibold is-medium">
+            {company}
+          </span>
           <span className="tag">
             {isNew === "true" && <span className="tag is-primary"> NEW! </span>}{" "}
           </span>
@@ -31,13 +35,17 @@ function ShowJobListings(props) {
         <div className="card-footer">
           {" "}
           <p className="card-footer-item">
-            <span>{postedAt}</span>
+            <span className="has-text-grey-light has-text-weight-semibold">
+              {postedAt}
+            </span>
+          </p>
+          <p className="card-footer-item has-text-weight-semibold">
+            <span className="has-text-grey-light">{contract}</span>
           </p>
           <p className="card-footer-item">
-            <span>{contract}</span>
-          </p>
-          <p className="card-footer-item">
-            <span>{location}</span>
+            <span className="has-text-grey-light has-text-weight-semibold">
+              {location}
+            </span>
           </p>
         </div>
       </div>

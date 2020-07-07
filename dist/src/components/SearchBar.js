@@ -4,21 +4,13 @@ function SearchBar(props) {
   return (
     <div className="search-bar">
       <div class="block">
-        <div class="field has-addons">
-          <p class="control">
-            <input
-              type="text"
-              class="input"
-              placeholder="Click any x button"
-              onChange={(e) => props.onFilterRoleChange(e.target.value)}
-            />
-          </p>
-          <p class="control">
-            <a href="" class="button is-info">
-              Search
-            </a>
-          </p>
-        </div>
+        <input
+          type="search"
+          class="input"
+          value={props.role}
+          placeholder="Click any x button"
+          onChange={(e) => props.onFilterRoleChange(e.target.value)}
+        />
       </div>
     </div>
   );
