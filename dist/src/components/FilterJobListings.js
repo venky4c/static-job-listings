@@ -18,7 +18,11 @@ function FilterJobListings(props) {
           >
             {role}
           </button>
-          <button className="button is-primary is-outlined is-small mx-1 my-1">
+          <button 
+            className="button is-primary is-outlined is-small mx-1 my-1"
+            value={level}
+            onClick={(e) => props.onFilterRoleClicked(e.target.value)}
+          >
             {level}
           </button>
           <span className="languages">
@@ -26,6 +30,8 @@ function FilterJobListings(props) {
               <button
                 className="button is-primary is-outlined is-small mx-1 my-1"
                 key={index}
+                value={value}
+                onClick={(e) => props.onFilterRoleClicked(e.target.value)}
               >
                 {value}
               </button>
@@ -35,6 +41,8 @@ function FilterJobListings(props) {
               <button
                 className="button is-primary is-outlined is-small mx-1 my-1"
                 key={index}
+                value={value}
+                onClick={(e) => props.onFilterRoleClicked(e.target.value)}
               >
                 {value}
               </button>
