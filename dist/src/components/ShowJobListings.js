@@ -1,6 +1,7 @@
 import React from "react";
 
 function ShowJobListings(props) {
+  // 
   const job = props.job;
   const {
     logo,
