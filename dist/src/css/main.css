@@ -4,14 +4,16 @@ html {
 
 .wrapper {
   margin: 0;
-  -webkit-box-shadow: 0px 0px 2px 2px #7b8e8e;
-          box-shadow: 0px 0px 2px 2px #7b8e8e;
-  padding: 10px;
+  -webkit-box-shadow: 0px 0px 2px 2px #96a6a6;
+          box-shadow: 0px 0px 2px 2px #96a6a6;
+  padding: 1rem;
 }
 
 @media (min-width: 1440px) {
   .wrapper {
     margin: 0 15%;
+    margin-top: 1rem;
+    padding: 2rem 3rem;
   }
 }
 
@@ -23,7 +25,7 @@ html {
 
 .wrapper .search-bar {
   display: inline-block;
-  border: 1px solid #7b8e8e;
+  border: 1px solid #cdd5d5;
   margin-left: 1.5rem;
   margin-top: 1rem;
   height: 2rem;
@@ -35,7 +37,7 @@ html {
 }
 
 .wrapper .card p span {
-  color: grey;
+  color: lightgray;
 }
 
 .wrapper .card > div:hover {

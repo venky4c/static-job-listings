@@ -62,20 +62,19 @@ function JobCard(props) {
               </span>
             </p>
           </div>
-
+          <hr size="2" width="80%" />
           <div className="column is-5">
-            <hr size="1" width="40%" />
             <button
               className="button is-primary is-outlined is-small mx-1 my-1 is-selected"
               value={role}
-              onClick={(e) => props.onFilterRoleClicked(e.target.value)}
+              onClick={(e) => props.onFilterButtonClicked(e.target.value)}
             >
               {role}
             </button>
             <button
               className="button is-primary is-outlined is-small mx-1 my-1 is-selected"
               value={level}
-              onClick={(e) => props.onFilterRoleClicked(e.target.value)}
+              onClick={(e) => props.onFilterButtonClicked(e.target.value)}
             >
               {level}
             </button>
@@ -85,7 +84,7 @@ function JobCard(props) {
                   className="button is-primary is-outlined is-small mx-1 my-1 is-selected"
                   key={index}
                   value={value}
-                  onClick={(e) => props.onFilterRoleClicked(e.target.value)}
+                  onClick={(e) => props.onFilterButtonClicked(e.target.value)}
                 >
                   {value}
                 </button>
@@ -96,7 +95,7 @@ function JobCard(props) {
                   className="button is-primary is-outlined is-small mx-1 my-1 is-selected"
                   key={index}
                   value={value}
-                  onClick={(e) => props.onFilterRoleClicked(e.target.value)}
+                  onClick={(e) => props.onFilterButtonClicked(e.target.value)}
                 >
                   {value}
                 </button>
