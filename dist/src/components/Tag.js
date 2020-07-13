@@ -6,7 +6,7 @@ function removeButton() {
   return false;
 }
 const Tag = (props) => (
-  <div className="column">
+  <div id="search-tags">
     <span className="tag">
       {props.name}
       <button

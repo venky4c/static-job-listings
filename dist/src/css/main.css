@@ -22,9 +22,16 @@ html {
 }
 
 .wrapper .search-bar {
+  display: inline-block;
+  border: 1px solid #7b8e8e;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  height: 2rem;
+  width: 90%;
+}
+
+.wrapper .search-bar #search-tags {
   display: inline;
-  justify-items: center;
-  background-color: red;
 }
 
 .wrapper .card p span {

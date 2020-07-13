@@ -72,9 +72,16 @@ html {
   }
 
   .search-bar {
-    display: inline;
-    justify-items: center;
-    background-color: red;
+    display: inline-block;
+    border: 1px solid color(--darkGrayishCyan);
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    height: 2rem;
+    width: 90%;
+
+    #search-tags {
+      display: inline;
+    }
   }
 
   .card p span {
