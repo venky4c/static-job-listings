@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 import Header from "./Header";
 import SearchBar from "./SearchBar";
-import ShowJobListings from "./ShowJobListings";
-import FilterJobListings from "./FilterJobListings";
+
+import JobCard from "./JobCard";
 
 function FilterableSkillsTable(props) {
   const [filterQueries, setFilterQueries] = useState([]);
@@ -33,12 +33,8 @@ function FilterableSkillsTable(props) {
       <Header />
       <SearchBar filterValues={filterQueries} />
       {filterData().map((job) => (
-        <div className="columns">
-          <ShowJobListings job={job} />
-          <FilterJobListings
-            job={job}
-            onFilterRoleClicked={(role) => addQuery(role)}
-          />
+        <div>
+          <JobCard job={job} onFilterRoleClicked={(role) => addQuery(role)} />
         </div>
       ))}
     </div>

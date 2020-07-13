@@ -4,7 +4,7 @@ import Tag from "./Tag";
 function SearchBar(props) {
   return (
     <div className="search-bar">
-      <div class="block">
+      <div className="columns is-gapless">
         {/* <input
           type="search"
           class="input"
@@ -12,8 +12,8 @@ function SearchBar(props) {
           placeholder="Click any x button"
           onChange={(e) => props.onFilterRoleChange(e.target.value)}
         /> */}
-        
-        {props.filterValues.map(value => (
+
+        {props.filterValues.map((value) => (
           <Tag name={value} />
         ))}
       </div>

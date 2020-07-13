@@ -46,8 +46,7 @@ html {
 
 .wrapper {
   margin: 0;
-  border: 5px solid rgb(86, 98, 110);
-  border-radius: 5px;
+  box-shadow: 0px 0px 2px 2px color(--darkGrayishCyan);
   padding: 10px;
 
   @include desktop {
@@ -76,5 +75,16 @@ html {
     display: inline;
     justify-items: center;
     background-color: red;
+  }
+
+  .card p span {
+    // background: grey;
+    color: grey;
+  }
+
+  .card > div:hover {
+    border-left: 5px solid color(--desaturatedDarkCyan);
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
   }
 } // end of wrapper

@@ -1,12 +1,23 @@
-import React from 'react';
+import React from "react";
 
+function removeButton() {
+  var elem = document.getElementById("btn");
+  elem.parentNode.remove();
+  return false;
+}
 const Tag = (props) => (
-    <div>
-        <span class="tag is-primary is-medium">
-            {props.name}
-            <button class="delete is-small" onClick={() => {}}></button> 
-        </span>
-    </div>
-)
+  <div className="column">
+    <span className="tag">
+      {props.name}
+      <button
+        className="delete is-small is-primary"
+        id="btn"
+        onClick={() => {
+          removeButton();
+        }}
+      ></button>
+    </span>
+  </div>
+);
 
 export default Tag;
