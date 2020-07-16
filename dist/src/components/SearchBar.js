@@ -2,8 +2,7 @@ import React from "react";
 import Tag from "./Tag";
 
 function SearchBar(props) {
-  const filterValues = props.filterValues;
-  console.log(`props.filterValues ${filterValues}`);
+  let filterValues = props.filterValues;
 
   return (
     <div className="search-bar">
@@ -17,6 +16,12 @@ function SearchBar(props) {
           />
         ))}
       </div>
+      <span className="tag">
+        Clear
+        <button className="delete is-danger" onClick={(e) => props.reset(e)}>
+          Clear
+        </button>
+      </span>
     </div>
   );
 }

@@ -7,7 +7,7 @@ function Tag(props) {
     e.preventDefault();
     deleteButton(e.target.value);
   };
-  console.log(`you want to filter by  ${buttonName}`);
+
   return (
     <div id="search-tags">
       <span className="tag" name="buttonName" id="btn" multiple="true">

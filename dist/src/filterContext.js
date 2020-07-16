@@ -17,3 +17,4 @@ function FilterContextProvider(props) {
 }
 
 export { FilterContextProvider, FilterContext };
+//This is a redundant file. Just keeping it so that I can implement this functionality in future.

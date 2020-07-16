@@ -74,8 +74,33 @@ html {
     }
   }
 
-  .card p span {
-    color: lightgray;
+  .card {
+    p span {
+      color: lightgray;
+    }
+
+    .card-content div {
+      //display: flex;
+      // .minus-logo {
+      //   display: contents;
+      //   box-shadow: 1px 1px 3px 1px color(--veryDarkGrayishCyan);
+
+      //   @include desktop {
+      //     grid-template-columns: auto auto;
+      //   }
+      // }
+      #logo {
+        display: flex;
+        //border: 1px solid red;
+        position: relative;
+        top: 50%;
+        justify-content: center;
+
+        @include desktop {
+          justify-content: start;
+        }
+      }
+    }
   }
 
   .card > div:hover {

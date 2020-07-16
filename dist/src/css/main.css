@@ -40,6 +40,25 @@ html {
   color: lightgray;
 }
 
+.wrapper .card .card-content div #logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 1440px) {
+  .wrapper .card .card-content div #logo {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
 .wrapper .card > div:hover {
   border-left: 5px solid #5ba4a4;
   border-top-left-radius: 0.5rem;

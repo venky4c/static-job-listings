@@ -8,6 +8,13 @@ import JobCard from "./JobCard";
 function FilterableSkillsTable(props) {
   const [filterQueries, setFilterQueries] = useState([]);
 
+  const initialState = [];
+
+  const reset = (e) => {
+    e.preventDefault();
+    setFilterQueries(initialState);
+  };
+
   const addQuery = (criteria) => {
     !filterQueries.includes(criteria) &&
       setFilterQueries((prevState) => [...prevState, criteria]);
@@ -31,7 +38,11 @@ function FilterableSkillsTable(props) {
   return (
     <div className="wrapper">
       <Header />
-      <SearchBar filterValues={filterQueries} removeQuery={removeQuery} />
+      <SearchBar
+        filterValues={filterQueries}
+        removeQuery={removeQuery}
+        reset={reset}
+      />
       {filterData().map((job) => (
         <div>
           <JobCard

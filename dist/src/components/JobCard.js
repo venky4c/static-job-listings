@@ -21,9 +21,10 @@ function JobCard(props) {
     <div className="card ">
       <div className="card-content">
         <div className="columns">
-          <div className="column is-1">
+          <div className="column is-1" id="logo">
             <img src={require(`../assets/images/${logo}`)} alt="" />
           </div>
+          {/* <div className="minus-logo"> */}
           <div className="column is-6">
             <span className="tag has-text-primary-dark has-text-weight-semibold is-medium">
               {company}
@@ -39,7 +40,7 @@ function JobCard(props) {
               )}
             </span>
 
-            <h4 className="title is-5">{position}</h4>
+            <h4 className="title is-6">{position}</h4>
             <p>
               <span className="tag has-text-grey-light has-text-weight-bold mx-1">
                 {postedAt}
@@ -102,6 +103,7 @@ function JobCard(props) {
               ))}
             </span>
           </div>
+          {/* </div> */}
         </div>
       </div>
     </div>
