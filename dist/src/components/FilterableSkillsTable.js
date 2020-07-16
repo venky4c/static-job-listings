@@ -31,7 +31,7 @@ function FilterableSkillsTable(props) {
   return (
     <div className="wrapper">
       <Header />
-      <SearchBar filterValues={filterQueries} />
+      <SearchBar filterValues={filterQueries} removeQuery={removeQuery} />
       {filterData().map((job) => (
         <div>
           <JobCard
