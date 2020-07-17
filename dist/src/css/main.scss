@@ -62,15 +62,23 @@ html {
   }
 
   .search-bar {
-    display: inline-block;
+    display: grid;
     border: 1px solid hsl(180, 8%, 82%);
-    margin-left: 1.5rem;
+    margin-left: 1rem;
     margin-top: 1rem;
     height: 2rem;
     width: 90%;
+    grid-template-columns: auto 1rem;
 
-    #search-tags {
-      display: inline;
+    @include desktop {
+      width: 85%;
+      margin-left: 2.5rem;
+    }
+    .search {
+      display: flex;
+    }
+    .clear {
+      justify-self: end;
     }
   }
 
@@ -79,27 +87,82 @@ html {
       color: lightgray;
     }
 
-    .card-content div {
-      //display: flex;
-      // .minus-logo {
-      //   display: contents;
-      //   box-shadow: 1px 1px 3px 1px color(--veryDarkGrayishCyan);
+    .card-content .parts {
+      display: grid;
 
-      //   @include desktop {
-      //     grid-template-columns: auto auto;
-      //   }
-      // }
+      @include desktop {
+        grid-template-columns: auto auto auto;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.7rem 1.5rem 0 #bddbdb;
+      }
+      .part-main {
+        display: grid;
+        padding-top: 13%;
+        border-left: 5px solid color(--desaturatedDarkCyan);
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+        padding-left: 8%;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.4rem 0.7rem 0.7rem #bddbdb;
+        @include desktop {
+          grid-template-columns: auto auto;
+          border: none;
+          align-content: center;
+          padding-top: unset;
+          padding-left: unset;
+          box-shadow: none;
+        }
+        .part1 h4 {
+          font-family: var(--fontSpartan);
+        }
+        .part2 {
+          // display: flex;
+          // align-items: flex-end;
+          // justify-content: center;
+          padding-bottom: 1rem;
+          @include desktop {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+          }
+          button {
+            color: color(--desaturatedDarkCyan);
+            background: color(--lightGrayishCyanBg);
+            font-weight: bold;
+            font-family: var(--fontSpartan);
+
+            //font-size: $fontSize;
+          }
+          button:hover {
+            color: color(--lightGrayishCyanBg);
+            background-color: color(--desaturatedDarkCyan);
+          }
+        }
+        hr {
+          background-color: lightgray;
+          justify-self: center;
+          @include desktop {
+            display: none;
+          }
+        }
+      } // end of .part-main
       #logo {
-        display: flex;
-        //border: 1px solid red;
-        position: relative;
-        top: 50%;
-        justify-content: center;
+        display: grid;
+        margin-left: 10%;
+        justify-content: start;
 
         @include desktop {
           justify-content: start;
+          align-self: center;
         }
-      }
+        img {
+          position: relative;
+          top: 50%;
+          @include desktop {
+            position: inherit;
+          }
+        }
+      } // end of logo
     }
   }
 

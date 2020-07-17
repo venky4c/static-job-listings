@@ -10,7 +10,12 @@ function Tag(props) {
 
   return (
     <div id="search-tags">
-      <span className="tag" name="buttonName" id="btn" multiple="true">
+      <span
+        className="tag is-primary"
+        name="buttonName"
+        id="btn"
+        multiple="true"
+      >
         {buttonName}
         <button
           className="delete is-small is-primary"

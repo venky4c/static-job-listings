@@ -6,7 +6,7 @@ function SearchBar(props) {
 
   return (
     <div className="search-bar">
-      <div>
+      <div className="search">
         {filterValues.map((value, index) => (
           <Tag
             id={index}
@@ -16,12 +16,14 @@ function SearchBar(props) {
           />
         ))}
       </div>
-      <span className="tag">
-        Clear
-        <button className="delete is-danger" onClick={(e) => props.reset(e)}>
+      <div className="clear">
+        <span className="tag is-primary">
           Clear
-        </button>
-      </span>
+          <button className="delete is-danger" onClick={(e) => props.reset(e)}>
+            Clear
+          </button>
+        </span>
+      </div>
     </div>
   );
 }

@@ -11,26 +11,31 @@ function FilterableSkillsTable(props) {
   const initialState = [];
 
   const reset = (e) => {
+    // Method called by the 'Clear' button inside the search bar
     e.preventDefault();
     setFilterQueries(initialState);
   };
 
   const addQuery = (criteria) => {
+    // Method called when each button is clicked
     !filterQueries.includes(criteria) &&
       setFilterQueries((prevState) => [...prevState, criteria]);
   };
 
   const removeQuery = (criteria) => {
+    // This is called When the button in the search bar is clicked
     const filteredQueries = filterQueries.filter((query) => query !== criteria);
     setFilterQueries(filteredQueries);
   };
 
   const filterData = () => {
-    return props.jobs.filter((job) =>
+    return props.jobs.filter((
+      job // filter jobs based on below conditions
+    ) =>
       filterQueries.every((filterQuery) =>
-        Object.keys(job).some((key) =>
-          job[key].toString().includes(filterQuery)
-        )
+        Object.keys(job).some((
+          key //Job is each item of the data json file; Object.keys(job) gives each property like role, level
+        ) => job[key].toString().includes(filterQuery))
       )
     );
   };
