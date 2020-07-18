@@ -16,14 +16,19 @@ function SearchBar(props) {
           />
         ))}
       </div>
-      <div className="clear">
-        <span className="tag is-primary">
-          Clear
-          <button className="delete is-danger" onClick={(e) => props.reset(e)}>
+      {props.numFilters > 0 && (
+        <div className="clear">
+          <span className="tag is-primary">
             Clear
-          </button>
-        </span>
-      </div>
+            <button
+              className="delete is-danger"
+              onClick={(e) => props.reset(e)}
+            >
+              Clear
+            </button>
+          </span>
+        </div>
+      )}
     </div>
   );
 }

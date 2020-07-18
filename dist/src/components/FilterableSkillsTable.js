@@ -11,19 +11,24 @@ function FilterableSkillsTable(props) {
   const initialState = [];
 
   const reset = (e) => {
-    // Method called by the 'Clear' button inside the search bar
+    // Function called by the 'Clear' button inside the search bar
     e.preventDefault();
     setFilterQueries(initialState);
   };
 
   const addQuery = (criteria) => {
-    // Method called when each button is clicked
+    // Function called when each of the RHS button(s) is clicked
     !filterQueries.includes(criteria) &&
       setFilterQueries((prevState) => [...prevState, criteria]);
   };
 
   const removeQuery = (criteria) => {
-    // This is called When the button in the search bar is clicked
+    // This is called When the button(s) inside the search bar is clicked. Suppose you have selected 'Frontend' and 'Junior'
+    // from the RHS buttons. Now filterQueries contains these two entries. If you now click on 'Frontend's close
+    // button, this function is invoked and the filter for 'Frontend' is removed which means all the roles are loaded back
+    // including the 'Frontend'. We are no longer filtering on the basis of 'role'. So we see jobs related to all 3 roles
+    // 'Frontend', 'Fullstack' and 'Backend'
+
     const filteredQueries = filterQueries.filter((query) => query !== criteria);
     setFilterQueries(filteredQueries);
   };
@@ -47,6 +52,7 @@ function FilterableSkillsTable(props) {
         filterValues={filterQueries}
         removeQuery={removeQuery}
         reset={reset}
+        numFilters={filterQueries.length}
       />
       {filterData().map((job) => (
         <div>

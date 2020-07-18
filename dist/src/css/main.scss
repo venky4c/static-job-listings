@@ -60,7 +60,7 @@ html {
     background-repeat: no-repeat;
     background: color(--desaturatedDarkCyan);
   }
-
+  //------------------------ SearchBar Styles Begin ---------------------
   .search-bar {
     display: grid;
     border: 1px solid hsl(180, 8%, 82%);
@@ -81,7 +81,8 @@ html {
       justify-self: end;
     }
   }
-
+  //------------------------ SearchBar Styles end ---------------------
+  //------------------------ Card Styles Begin ---------------------
   .card {
     p span {
       color: lightgray;
@@ -116,9 +117,6 @@ html {
           font-family: var(--fontSpartan);
         }
         .part2 {
-          // display: flex;
-          // align-items: flex-end;
-          // justify-content: center;
           padding-bottom: 1rem;
           @include desktop {
             display: flex;
@@ -130,8 +128,6 @@ html {
             background: color(--lightGrayishCyanBg);
             font-weight: bold;
             font-family: var(--fontSpartan);
-
-            //font-size: $fontSize;
           }
           button:hover {
             color: color(--lightGrayishCyanBg);
