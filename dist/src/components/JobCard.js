@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "semantic-ui-react";
 
 function JobCard(props) {
   const job = props.job;
@@ -46,17 +45,17 @@ function JobCard(props) {
                 <span className="tag has-text-grey-light has-text-weight-bold mx-1">
                   {postedAt}
                 </span>
-                <span class="icon-small">
-                  <span class="fa-stack">
-                    <i class="fas fa-circle"></i>
+                <span className="icon-small">
+                  <span className="fa-stack">
+                    <i className="fas fa-circle"></i>
                   </span>
                 </span>
                 <span className="tag has-text-grey-light has-text-weight-bold mx-1">
                   {contract}
                 </span>
-                <span class="icon-small">
-                  <span class="fa-stack">
-                    <i class="fas fa-circle"></i>
+                <span className="icon-small">
+                  <span className="fa-stack">
+                    <i className="fas fa-circle"></i>
                   </span>
                 </span>
                 <span className="tag has-text-grey-light has-text-weight-bold mx-1">

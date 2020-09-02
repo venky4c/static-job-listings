@@ -55,7 +55,7 @@ function FilterableSkillsTable(props) {
         numFilters={filterQueries.length}
       />
       {filterData().map((job) => (
-        <div>
+        <div key={job.id}>
           <JobCard
             job={job}
             onFilterButtonClicked={(criteria) => addQuery(criteria)}
