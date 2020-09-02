@@ -12,5 +12,5 @@ on hover for just the desktop version etc were all nice features to implement.
 > JSS: This data has nesting upto 3 levels and it was a challenge to filter data based on user input selection based on intermediate
 levels of data nesting.
 - React: Using state for array data type and **making the manipulation of data as pure without side effects by using spread operator**.
-Using callback function for state management by passing the methods as props to the required classes, for the removing of buttons inside
-the searchbar.
+*Using callback function for state management by passing the functions as props to the required classes, for the removing of buttons inside
+the searchbar.*
