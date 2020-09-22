@@ -1,6 +1,6 @@
 # static-job-listings
 
-![Live Project](https://gifted-borg-fb4add.netlify.app/)
+![Live Project](https://gifted-borg-fb4add.netlify.app)
 
 ![Alt Link](https://github.com/venky4c/static-job-listings/blob/master/dist/src/JobListings.gif)
 
